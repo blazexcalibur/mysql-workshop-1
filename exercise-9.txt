@@ -1,0 +1,14 @@
+create database barn_with_chicken;
+use barn_with_chicken
+
+create table barn( 
+    id int auto_increment primary key, 
+    chicken int
+);
+
+create table chicken(
+    id int auto_increment primary key, 
+    barnId int, 
+    type enum('hens', 'roosters', 'chicks'), 
+    date_of_birth datetime
+); 
