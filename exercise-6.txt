@@ -1,0 +1,2 @@
+use decodemtl_addressbook;
+drop table Test;
