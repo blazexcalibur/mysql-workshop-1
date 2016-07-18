@@ -1,0 +1,28 @@
+create table Account(
+    id int auto_increment primary key, 
+    email varchar(255), password varchar(40), 
+    createdOn datetime, modifiedOn datetime
+    );
+    
+create table AddressBook(
+    id int auto_increment primary key, 
+    accountId int, 
+    name varchar(255), 
+    reatedOn datetime, 
+    modifiedOn datetime
+    );
+    
+create table Entry(
+    id int auto_increment primary key, 
+    addressBookId int, 
+    firstName varchar(255),
+    lastName varchar(255), 
+    birthday datetime, 
+    type enum('phone','address','city'), 
+    subtype enum('country','continent'), 
+    contentLineOne varchar(255), 
+    contentLineTwo varchar(255),
+    contentLineThree varchar(255),
+    contentLineFour varchar(255),
+    contentLineFive varchar(255)
+);
